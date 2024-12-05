@@ -11,7 +11,7 @@ const Top = () => {
   const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
   return (
     <>
-{isRetina &&  
+    {isDesktopOrLaptop ? "" : <> {isRetina &&  
 //to show in mobile format
   <div className=" h-[60px] w-full mt-3 xl:h-[100px] grid grid-cols-2">
   <div className='grid grid-flow-col   '>
@@ -73,7 +73,8 @@ alt="facebook"
 
 
 </div>
-}
+}</>}
+
 
 
 {isDesktopOrLaptop &&  

@@ -1,17 +1,21 @@
 import { Card,  Typography } from '@material-tailwind/react'
 import React from 'react'
 import Carousle from './Carousle'
+import Courses from './courses/Courses'
+import { useGetAllNoticeQuery } from '../Api/noticeApi'
 
 
 
 const Home = () => {
+  const {data} = useGetAllNoticeQuery();
+  console.log(data.data.notice_file);
   return (
     <div className="mx-auto  max-w-screen-xl py-2">
         <Card className="mb-12 overflow-hidden ">
          <Carousle/>
         </Card>
-        <Typography variant="h2" color="blue-gray" className="mb-2">
-          What is Material Tailwind
+        <Typography variant="h2" color="blue-gray" className="mb-2 underline">
+          INTRODUCTION
         </Typography>
         <Typography color="gray" className="font-normal">
           Can you help me out? you will get a lot of free exposure doing this
@@ -28,7 +32,7 @@ const Home = () => {
           to be a chunk of change. There are more projects lined up charge extra
           the next time.
         </Typography>
-        
+        <Courses/>
       </div>
   )
 }

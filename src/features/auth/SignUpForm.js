@@ -27,7 +27,7 @@ const SignUpForm = () => {
 
     }
   })
-  const nav =useNavigate();
+  const nav = useNavigate();
   return (
     <div className='flex items-center justify-center'>
       <Card color="transparent" className='mt-8 p-4 mb-10 '>
